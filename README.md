@@ -40,3 +40,10 @@ We used Buildroot's br2_external feature to construct the virtual machine.
 > ./output/images/start-qemu.sh serial-only
 ```
 
+### About
+
+All rights reserved. Copyright (C) 2020 by Anvil Ventures Inc.
+For licensing information see LICENSE.
+For more information contact Michael Milvich <michael.milvich@anvilventures.com>
+
+To find updated source code or to contribute patches go to the following URL: https://github.com/anvilventures/symlink-secure-boot-vm
