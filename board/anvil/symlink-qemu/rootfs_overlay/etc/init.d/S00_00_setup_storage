@@ -1,0 +1,36 @@
+#!/bin/sh
+
+start() {
+	# mount everything in fstab
+	mount -a
+
+	# create storage directories
+	mkdir -p /storage/log
+	mkdir -p /storage/cache
+	mkdir -p /storage/fw_update
+	mkdir -p /storage/creds
+
+	# delete anything left over from previous boot
+	rm -rf /storage/cache/*
+}
+
+stop() {
+	echo "Can't stop..."
+}
+
+restart() {
+	stop
+	sleep 1
+	start
+}
+
+case "$1" in
+	start|stop|restart)
+		"$1";;
+	reload)
+		# Restart, since there is no true "reload" feature.
+		restart;;
+	*)
+		echo "Usage: $0 {start|stop|restart|reload}"
+		exit 1
+esac

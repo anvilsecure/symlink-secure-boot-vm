@@ -1,0 +1,30 @@
+#!/bin/sh
+
+CREDS_FILE="/storage/creds/creds.txt"
+
+start() {
+        PASS=`xxd -p -l 16 /dev/urandom`
+        echo "# Auth token, valid for only one boot!" > ${CREDS_FILE}
+	echo "${PASS}" >> ${CREDS_FILE}
+}
+
+stop() {
+	echo "Can't stop..."
+}
+
+restart() {
+        stop
+        sleep 1
+        start
+}
+
+case "$1" in
+        start|stop|restart)
+                "$1";;
+        reload)
+                # Restart, since there is no true "reload" feature.
+                restart;;
+        *)
+                echo "Usage: $0 {start|stop|restart|reload}"
+                exit 1
+esac

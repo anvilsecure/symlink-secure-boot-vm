@@ -1,0 +1,17 @@
+Modify the default lighttpd config to run as root 
+
+
+diff -Naur lighttpd-1.4.55.org/doc/config/lighttpd.conf lighttpd-1.4.55/doc/config/lighttpd.conf
+--- lighttpd-1.4.55.org/doc/config/lighttpd.conf	2020-06-11 00:37:02.674659199 +0000
++++ lighttpd-1.4.55/doc/config/lighttpd.conf	2020-06-11 00:37:39.511031351 +0000
+@@ -101,8 +101,8 @@
+ ## Run as a different username/groupname.
+ ## This requires root permissions during startup. 
+ ##
+-server.username  = "www-data"
+-server.groupname = "www-data"
++#server.username  = "www-data"
++#server.groupname = "www-data"
+ 
+ ##
+ ## Enable lighttpd to serve requests on sockets received from systemd

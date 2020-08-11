@@ -1,0 +1,9 @@
+diff -Naur lighttpd-1.4.55.org/doc/config/lighttpd.conf lighttpd-1.4.55/doc/config/lighttpd.conf
+--- lighttpd-1.4.55.org/doc/config/lighttpd.conf	2020-06-11 01:48:30.500813722 +0000
++++ lighttpd-1.4.55/doc/config/lighttpd.conf	2020-06-11 01:48:45.540966845 +0000
+@@ -480,3 +480,5 @@
+ #include "/etc/lighttpd/vhosts.d/*.conf"
+ ##
+ #######################################################################
++include "conf.d/sites/*.conf"
++
