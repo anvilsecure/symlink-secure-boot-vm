@@ -1,6 +1,6 @@
 ## Defeating Secure Boot with Symlink (& Hard Link) Attacks
 
-This project is a virtual machine created to demonstrate the various attacks detailed in Anvil's [Defeating Secure Boot with Symlink and Hard Link Attacks]() white paper.
+This project is a virtual machine created to demonstrate the various attacks detailed in Anvil's [Defeating Secure Boot with Symlink and Hard Link Attacks](https://www.anvilventures.com/wp-content/uploads/2020/08/Defeating-Secure-Boot-with-Symlink-Hard-Link-Attacks.pdf) white paper.
 
 A typical Linux embedded system with secure boot cryptographically verifies the boot loader, kernel, and root file system. This can have the effect of making the root file system read only. This presents the embedded developer with a problem. Where then can an embedded developer store device-specific data such as configurations and logs between reboots? A common solution is to create an unprotected storage partition for non-volatile data (data that can be retrieved after power cycling) and mount it in a location such as /storage. Ideally, the non-volatile storage partition should be protected with cryptographic integrity checks, but from our experience, this is rarely done.
 
