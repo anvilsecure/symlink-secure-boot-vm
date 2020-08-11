@@ -23,6 +23,8 @@ The virtual machine utilizes QEMU's user networking and forwards two ports, 8888
 
 Browse to http://localhost:8888 to get started!
 
+![screenshot](screenshot.png)
+
 ### Building
 
 We used Buildroot's br2_external feature to construct the virtual machine.
